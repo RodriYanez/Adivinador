@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.Locale;
+
 public class AdivinaPCActivity extends AppCompatActivity {
 
     private static final int NUMERO_MAXIMO = 100;
@@ -32,14 +34,14 @@ public class AdivinaPCActivity extends AppCompatActivity {
         numeroActual = NUMERO_MAXIMO / 2;
         maxActual = NUMERO_MAXIMO;
         minActual = NUMERO_MINIMO;
-        numero.setText(numeroActual + "?");
+        numero.setText(String.format(Locale.US,"%d ?",numeroActual));
 
         btnMayor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 minActual = numeroActual;
                 numeroActual = (maxActual + numeroActual) / 2;
-                numero.setText(numeroActual + "?");
+                numero.setText(String.format(Locale.US,"%d ?",numeroActual));
             }
         });
         btnMenor.setOnClickListener(new View.OnClickListener() {
@@ -47,22 +49,34 @@ public class AdivinaPCActivity extends AppCompatActivity {
             public void onClick(View view) {
                 maxActual = numeroActual;
                 numeroActual = (minActual + numeroActual) / 2;
-                numero.setText(numeroActual + "?");
+                numero.setText(String.format(Locale.US,"%d ?",numeroActual));
             }
         });
         btnIgual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setContentView(R.layout.winner_screen);
+
                 Button btnVolverAJugar = findViewById(R.id.btnVolverAJugar);
+                Button btnCambiarJuego = findViewById(R.id.btnCambiarJuego);
                 TextView txtNumeroGanador = findViewById(R.id.txtNumeroGanador);
 
-                txtNumeroGanador.setText("El numero que pensaste es " + numeroActual);
+                txtNumeroGanador.setText(String.format(
+                        Locale.US,
+                        getResources().getString(R.string.lang_numero_pensado),
+                        numeroActual));
 
                 btnVolverAJugar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(AdivinaPCActivity.this, AdivinaPCActivity.class);
+                        AdivinaPCActivity.this.startActivity(intent);
+                    }
+                });
+                btnCambiarJuego.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(AdivinaPCActivity.this, AdivinaPersonaActivity.class);
                         AdivinaPCActivity.this.startActivity(intent);
                     }
                 });

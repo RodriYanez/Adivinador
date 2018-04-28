@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,33 +10,41 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mayor o menor a"
+        android:text="@string/lang.menor.o.mayor"
         android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
         android:layout_gravity="center"/>
     <TextView
         android:id="@+id/numero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="50?"
         android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
         android:layout_gravity="center"/>
     <LinearLayout
+        tools:ignore="ContentDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal"
         android:layout_marginTop="50dp">
         <Button
+            style="?attr/buttonBarButtonStyle"
             android:id="@+id/btnMenor"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Menor"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="@string/lang.menor"
             android:textSize="20sp" />
         <Button
+            style="?attr/buttonBarButtonStyle"
             android:id="@+id/btnMayor"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Mayor"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="@string/lang.mayor"
             android:textSize="20sp"
             android:layout_marginStart="20dp"/>
     </LinearLayout>
@@ -45,7 +52,9 @@
         android:id="@+id/btnIgual"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Correcto!"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="@string/lang.correcto"
         android:textSize="20sp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"/>

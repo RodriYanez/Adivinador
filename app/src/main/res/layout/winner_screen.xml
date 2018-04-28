@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -9,11 +10,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="El numero que pensaste es "
+        android:gravity="center"
         android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
         android:layout_marginTop="10dp"/>
 
     <ImageView
+        tools:ignore="ContentDescription"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
@@ -27,17 +30,23 @@
         android:layout_marginTop="25dp"
         android:layout_gravity="center">
         <Button
+            style="?attr/buttonBarButtonStyle"
             android:id="@+id/btnVolverAJugar"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Volver a Jugar"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:text="@string/lang.button.volver.a.jugar"
             android:textSize="20sp"/>
         <Button
+            style="?attr/buttonBarButtonStyle"
             android:id="@+id/btnCambiarJuego"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:layout_marginStart="30dp"
-            android:text="Cambiar juego"
+            android:text="@string/lang.button.cambiar.juego"
             android:textSize="20sp"/>
     </LinearLayout>
 </LinearLayout>
