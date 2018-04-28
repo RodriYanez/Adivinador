@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AdivinaPCActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mayor o menor a"
+        android:textSize="50sp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50?"
+        android:textSize="50sp"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+        <Button
+            android:id="@+id/btnMenor"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Menor"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/btnMayor"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Mayor"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnIgual"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Correcto!"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>
