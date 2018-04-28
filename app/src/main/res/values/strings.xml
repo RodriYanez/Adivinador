@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Adivinador</string>
+    <string name="lang.bienvenido">Bienvenido a Adivinador!</string>
+    <string name="lang.button.adivina.maquina">Adivina Maquina</string>
+    <string name="lang.button.adivina.persona">Adivina Persona</string>
+    <string name="lang.elegir.numero.1.a.100">Elige un numero del 1 al 100</string>
+    <string name="lang.hint.colocar.numero">Coloque aqui su numero...</string>
+    <string name="lang.aceptar">ACEPTAR</string>
+    <string name="lang.numero.pensado">El numero que pensaste es %1$d</string>
+    <string name="lang.error.numero.equivocado.mayor">El numero que pense es mayor a %1$d</string>
+    <string name="lang.error.numero.equivocado.menor">El numero que pense es menor a %1$d</string>
+    <string name="lang.felicitaciones">
+        FELICITACIONES!!!\n
+        El numero que pense es %1$d
+    </string>
+    <string name="lang.button.volver.a.jugar">Volver a Jugar</string>
+    <string name="lang.button.cambiar.juego">Cambiar juego</string>
+    <string name="lang.menor.o.mayor">Mayor o menor a</string>
+    <string name="lang.menor">Menor</string>
+    <string name="lang.mayor">Mayor</string>
+    <string name="lang.correcto">Correcto!</string>
 </resources>
